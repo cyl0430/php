@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        form{
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+        }
+        .item{
+            margin-bottom: 20px;
+        }
+        .g_btn{
+            font-size: 14px;
+            background-color: #999;
+            color: black;
+            cursor: pointer;
+        }
+        .g_btn:hover{
+            background-color: #000000;
+            color: white;
+        }
+        .item:nth-child(1){
+            position: relative;
+        }
+        .item:nth-child(1) input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .item:nth-child(1) .btn{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .item:nth-child(2) input{
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <form action="015.php" method="post" enctype="multipart/form-data">
+        <div class="item g_btn">
+            <!--限制文件的最大值-->
+            <!--<input type="hidden" name="MAX_FILE_SIZE" value="10">-->
+            <input type="file" name="file">
+            <div class="btn">请选择文件</div>
+        </div>
+        <div class="item">
+            <input type="submit" value="上传">
+        </div>
+    </form>
+</body>
+</html>
